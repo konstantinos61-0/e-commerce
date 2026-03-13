@@ -40,9 +40,9 @@ The website offers the following core features:
 
 ### What I implemented
 This application's distribution code is available at: https://cdn.cs50.net/web/2020/spring/projects/2/commerce.zip (accessed 12 March 2026). It includes only the following routes: login, logout and register as well as a basic HTML layout for the navigation bar, the login and registration form. I studied, understood them and then moved on to complete the rest of the app. Specifically, I implemented the following:
-- **Routes (views)**: index, create_listing, listing, watchlist_modification, watchlist, close, user_listings, my_bids, categories, active_category_listings
-- **Models**: the entirety of the models classes.
-- **ModelForms**: the entirety of the modelforms classes.
+- **Routes (views)**: All the other routes of the website (10)
+- **Models**: all of the models classes.
+- **ModelForms**: all of the modelforms classes.
 - **HTML templates**: I substantially extended the existing HTML templates and added new ones for all the views and some error codes, using the appropriate semantic HTML elements.
 - **CSS styles**: I implemented the entirety of the styles.css file (except a one-line rule) which is linked in every template. The file makes up a straightforward, organized style and layout. It is consistent with the responsive design principles, including flex-box and relative sizing utilities.
 
