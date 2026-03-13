@@ -1,6 +1,6 @@
 # commerce — Web Application
 ### Description
-A Django web application for an eBay-like e-commerce auction site. It allows users to post auction listings, place bids on listings, comment on them and add them to a "watchlist". I completed this project as part of HarvardX's CS50-W course for web programming with Python and JavaScript. 
+A Django web application for an eBay-like e-commerce auction site. It allows users to post auction listings, place bids on listings, comment on them and add them to a "watchlist". I completed this project as part of HarvardX's CS50-W course for Web Programming with Python and JavaScript. 
 
 ### Demo
 A live demo video is available at: https://www.youtube.com/watch?v=au95n-cWGZ0&feature=youtu.be
