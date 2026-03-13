@@ -1,0 +1,10 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Choose a category</h2>
+    <section class="categories">
+        {% for category, human_readable_category in categories.items  %}
+            <div><a href="{% url 'active_category_listings' category %}">{{ human_readable_category }}</a></div>
+        {% endfor %}
+    </section>
+{% endblock %}

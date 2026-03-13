@@ -1,0 +1,62 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if seller %}
+        {% if user == seller %}
+            <h2>Your Listings</h2>
+        {% else %}
+            <h2>{{ seller }}'s Listings</h2>
+        {% endif %}
+
+    {% else %}
+        <h2>Listings you have bid on</h2>
+    {% endif %}
+
+    <section class="active_inactive">
+        <section class="active">
+            <h3>Active</h3>
+            {% for listing in listings %}
+                {% if listing.active %}
+                    <article class="listing">
+                        <div class="listing-image">
+                            <img src="{{ listing.image_url }}" alt="{{ listing.title }}">
+                        </div>
+                        <div>
+                            <a href="{% url 'listing' listing.id %}"><h4>{{listing.title}}</h4></a>
+                            {% if listing.top_bid %}
+                                <p><b>Price</b>: ${{listing.top_bid}}</p>
+                            {% else %}
+                                <p><b>Price</b>: ${{listing.starting_bid}}</p>
+                            {% endif %}
+                            <p>{{ listing.description }}</p>
+                            <p><small>Created: {{ listing.created_at }}</small></p>
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </section>
+
+        <section class="inactive">
+            <h3>Closed</h3>
+            {% for listing in listings %}
+                {% if not listing.active %}
+                    <article class="listing">
+                        <div class="listing-image">
+                            <img src="{{ listing.image_url }}" alt="{{ listing.title }}">
+                        </div>
+                        <div>
+                            <a href="{% url 'listing' listing.id %}"><h3>{{listing.title}}</h3></a>
+                            {% if listing.top_bid %}
+                                <p><b>Price</b>: ${{listing.top_bid}}</p>
+                            {% else %}
+                                <p><b>Price</b>: ${{listing.starting_bid}}</p>
+                            {% endif %}
+                            <p>{{ listing.description }}</p>
+                            <p><small>Created: {{ listing.created_at }}</small></p>
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        </section>
+    </section>
+{% endblock %}

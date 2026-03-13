@@ -1,0 +1,30 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if category %}
+        <h2>Active Listings for {{ category_human_readable  }}</h2>
+    {% elif watch %}
+         <h2>Watchlist</h2>
+    {% else %}
+        <h2>Active Listings</h2>
+    {% endif %}
+    <section>
+        {% for listing in listings %}
+            <article class="listing">
+                <div class="listing-image">
+                    <img src="{{ listing.image_url }}" alt="{{ listing.title }}">
+                </div>
+                <div>
+                    <a href="{% url 'listing' listing.id %}"><h3>{{listing.title}}</h3></a>
+                    {% if listing.top_bid %}
+                        <p><b>Price</b>: ${{listing.top_bid}}</p>
+                    {% else %}
+                        <p><b>Price</b>: ${{listing.starting_bid}}</p>
+                    {% endif %}
+                    <p>{{  listing.description }}</p>
+                    <p><small>Created: {{ listing.created_at }}</small></p>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

@@ -1,0 +1,183 @@
+/* Sizing and Spacing, Colors */
+body {
+    padding: 10px;
+    background-color: #f2f7f6;
+    color: black;
+}
+
+a {
+    color: #30756b;
+}
+
+a:hover {
+    color: #19183B;
+}
+    /* create_listing.html */
+
+
+    .create_listing {
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    /* listing articles */
+    .listing {
+        max-height: 300px;
+        min-height: 100px;
+        height: 23vh;
+        margin: 10px; 
+        border-bottom: 1px solid #19183B;
+    }
+
+    .listing > div {
+        height: 100%;
+        padding: 3px;
+    }
+
+    .listing > div:nth-child(2) {
+        border-left: 1px solid #19183B;
+        padding-left: 20px;
+    }
+
+    /* listing image */
+    .listing-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* listing.html template */
+    .comment {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .comment h4 {
+        width: fit-content;
+        padding: 5px;
+    }
+
+    .main-section .listing-image {
+        max-height: 400px;
+        min-height: 200px;
+        height: 30vh;
+    }
+
+    .main-section article, .bid article, .comments article {
+        border: none;
+        height: fit-content;
+    }
+
+    .main-section {
+        margin-bottom: 100px;
+    }
+
+    .main-section > article:first-child {
+        padding-right: 10px;
+    }
+
+    .main-section > article:nth-child(2) {
+        border-left: 6px double #19183B;
+        padding-left: 20px;
+    }
+
+    .comments form {
+        margin-bottom: 50px;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .bid {
+        width: 60%;
+        margin: 0px auto 50px auto;
+    }
+
+    .closed-message {
+        font-size: 1.5rem;
+        color: rgb(153, 61, 18);
+    }
+
+    .comment {
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        background-color: #c7c9c9;
+    }
+
+    /* categories.html */
+    .categories > div {
+        padding: 5px;
+        background-color: #a4dede;
+        border: 1px solid lightgray;
+    }
+
+    /* active_inactive.html */
+    .active_inactive h3 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .active {
+        border-right: 3px dashed #19183B;
+    }
+
+/* Layout */
+
+    /* index.html */
+    .listing {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .listing div {
+        flex: 4 200px;
+    }
+
+    .listing div:first-child {
+        flex: 1 100px;
+    }
+
+    /* listing.html */
+    .main-section {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .main-section > article {
+        flex: 3 100px;
+    }
+
+    .main-section > article:first-child {
+        flex: 1 100px;
+    }
+
+    /* categories.html */
+    .categories {
+        display: flex;
+        flex-flow: row wrap;
+        width: 70%;
+        margin: 0px auto;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .categories > div {
+        flex: 1 auto;
+        margin: 5px;
+    }
+
+    .categories > div > a {
+        display: block;
+    }
+
+    /* user.html, my_bids.html */
+    .active_inactive {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .active_inactive > section {
+        flex: 1 100px;
+        margin: 10px;
+    }
